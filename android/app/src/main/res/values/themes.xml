@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KeyboardKu" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:colorPrimary">#1E88E5</item>
+        <item name="android:colorAccent">#42A5F5</item>
+        <item name="android:textColorPrimary">#EEEEEE</item>
+        <item name="android:textColorSecondary">#9E9E9E</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

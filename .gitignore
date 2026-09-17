@@ -1,0 +1,14 @@
+android/local.properties
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/.idea/
+android/*.iml
+android/app/*.iml
+server/target/
+.toolchain/
+*.log
+dist/
+android/keystore/
+android/keystore.properties

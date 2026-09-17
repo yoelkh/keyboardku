@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KeyboardKu</string>
+    <string name="settings">Pengaturan</string>
+    <string name="onboarding">Persiapan perangkat</string>
+    <string name="notif_channel">Koneksi KeyboardKu</string>
+    <string name="notif_title">KeyboardKu aktif</string>
+    <string name="notif_stop">Putuskan</string>
+</resources>
