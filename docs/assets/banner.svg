@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380" role="img" aria-label="KeyboardKu: your Android phone as a low-latency wireless keyboard, trackpad and air-mouse for Windows 11">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#0d1b3a"/>
+      <stop offset="1" stop-color="#0a2a4f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fa3ff"/>
+      <stop offset="1" stop-color="#7ce0c3"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3987e5" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3987e5" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .t { font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .link { stroke-dasharray: 10 12; animation: flow 1.6s linear infinite; }
+      .link2 { stroke-dasharray: 4 14; animation: flow 1.1s linear infinite; }
+      @keyframes flow { to { stroke-dashoffset: -44; } }
+      .cursor { animation: drift 5s ease-in-out infinite; }
+      @keyframes drift { 0%,100% { transform: translate(0,0); } 35% { transform: translate(46px,-22px); } 70% { transform: translate(-30px,18px); } }
+      .finger { animation: drift2 5s ease-in-out infinite; }
+      @keyframes drift2 { 0%,100% { transform: translate(0,0); } 35% { transform: translate(16px,-9px); } 70% { transform: translate(-11px,7px); } }
+      @media (prefers-reduced-motion: reduce) { .link, .link2, .cursor, .finger { animation: none; } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="380" rx="24" fill="url(#bg)"/>
+  <circle cx="930" cy="190" r="260" fill="url(#glow)"/>
+
+  <!-- left: wordmark -->
+  <g class="t">
+    <g transform="translate(72,86)">
+      <rect width="64" height="44" rx="9" fill="none" stroke="url(#accent)" stroke-width="3"/>
+      <g fill="#7ce0c3">
+        <rect x="10" y="10" width="7" height="7" rx="1.5"/><rect x="21" y="10" width="7" height="7" rx="1.5"/><rect x="32" y="10" width="7" height="7" rx="1.5"/><rect x="43" y="10" width="7" height="7" rx="1.5"/>
+        <rect x="10" y="21" width="7" height="7" rx="1.5"/><rect x="21" y="21" width="7" height="7" rx="1.5"/><rect x="32" y="21" width="7" height="7" rx="1.5"/><rect x="43" y="21" width="7" height="7" rx="1.5"/>
+        <rect x="16" y="32" width="32" height="5" rx="1.5"/>
+      </g>
+    </g>
+    <text x="152" y="124" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-1">KeyboardKu</text>
+    <text x="72" y="182" font-size="24" fill="#d7e3f7">Your Android phone as a wireless</text>
+    <text x="72" y="214" font-size="24" fill="#d7e3f7"><tspan fill="#7ce0c3" font-weight="600">keyboard</tspan>, <tspan fill="#7ce0c3" font-weight="600">trackpad</tspan> and <tspan fill="#7ce0c3" font-weight="600">air-mouse</tspan></text>
+    <text x="72" y="246" font-size="24" fill="#d7e3f7">for Windows 11.</text>
+
+    <g font-size="14" font-weight="600">
+      <g transform="translate(72,286)">
+        <rect width="150" height="32" rx="16" fill="#12284d" stroke="#2c4f8a"/>
+        <text x="75" y="21" text-anchor="middle" fill="#cfe1ff">Bluetooth HID</text>
+      </g>
+      <g transform="translate(234,286)">
+        <rect width="160" height="32" rx="16" fill="#12284d" stroke="#2c4f8a"/>
+        <text x="80" y="21" text-anchor="middle" fill="#cfe1ff">Encrypted UDP</text>
+      </g>
+      <g transform="translate(406,286)">
+        <rect width="150" height="32" rx="16" fill="#12284d" stroke="#2c4f8a"/>
+        <text x="75" y="21" text-anchor="middle" fill="#cfe1ff">Kotlin + Rust</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- right: phone -> laptop -->
+  <g transform="translate(700,60)">
+    <!-- phone -->
+    <rect x="0" y="0" width="132" height="260" rx="22" fill="#05070d" stroke="#3b4a66" stroke-width="2.5"/>
+    <rect x="10" y="26" width="112" height="150" rx="10" fill="#0a0f1c" stroke="#24324c"/>
+    <g class="finger">
+      <circle cx="66" cy="102" r="13" fill="#4fa3ff" fill-opacity="0.22"/>
+      <circle cx="66" cy="102" r="6" fill="#4fa3ff"/>
+    </g>
+    <g fill="#1a2438">
+      <rect x="10" y="184" width="24" height="16" rx="4"/><rect x="39" y="184" width="24" height="16" rx="4"/><rect x="68" y="184" width="24" height="16" rx="4"/><rect x="97" y="184" width="25" height="16" rx="4"/>
+      <rect x="10" y="208" width="54" height="26" rx="6"/><rect x="68" y="208" width="54" height="26" rx="6"/>
+    </g>
+    <rect x="48" y="10" width="36" height="6" rx="3" fill="#1a2438"/>
+
+    <!-- links -->
+    <path class="link" d="M140 96 C 200 60, 250 60, 306 96" fill="none" stroke="#4fa3ff" stroke-width="3" stroke-linecap="round"/>
+    <path class="link2" d="M140 150 C 200 186, 250 186, 306 150" fill="none" stroke="#7ce0c3" stroke-width="3" stroke-linecap="round"/>
+    <text class="t" x="223" y="54" text-anchor="middle" font-size="13" fill="#9fc2ff">Bluetooth</text>
+    <text class="t" x="223" y="206" text-anchor="middle" font-size="13" fill="#9be8d2">WiFi · USB · hotspot</text>
+
+    <!-- laptop -->
+    <g transform="translate(312,30)">
+      <rect x="0" y="0" width="200" height="132" rx="10" fill="#05070d" stroke="#3b4a66" stroke-width="2.5"/>
+      <rect x="9" y="9" width="182" height="114" rx="4" fill="#0e1830"/>
+      <g fill="#1b2c52"><rect x="22" y="24" width="90" height="8" rx="4"/><rect x="22" y="40" width="130" height="8" rx="4"/><rect x="22" y="56" width="70" height="8" rx="4"/></g>
+      <g class="cursor">
+        <path d="M112 66 l0 30 l8 -7 l6 13 l6 -3 l-6 -12 l11 -1 z" fill="#ffffff" stroke="#05070d" stroke-width="1.5" stroke-linejoin="round"/>
+      </g>
+      <path d="M-18 146 h236 l-10 14 h-216 z" fill="#0a1020" stroke="#3b4a66" stroke-width="2.5" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

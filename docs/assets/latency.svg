@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="Estimated worst-case latency budget per connection path. Bluetooth HID about 22 ms, WiFi about 14 ms, USB tethering about 7 ms; all below the 30 to 40 ms design target and the 55 ms just-noticeable difference for touchpad dragging.">
+  <style>
+    .t { font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .title { font-size: 19px; font-weight: 700; fill: #ffffff; }
+    .sub { font-size: 13px; fill: #c3c2b7; }
+    .cat { font-size: 14px; font-weight: 600; fill: #ffffff; }
+    .catsub { font-size: 12px; fill: #c3c2b7; }
+    .val { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .tick { font-size: 12px; fill: #a3a297; }
+    .leg { font-size: 13px; fill: #c3c2b7; }
+    .note { font-size: 12px; fill: #c3c2b7; }
+  </style>
+
+  <rect width="1000" height="440" rx="18" fill="#1a1a19"/>
+
+  <g class="t">
+    <text x="36" y="48" class="title">Estimated latency budget per path</text>
+    <text x="36" y="70" class="sub">Worst-case time from finger movement to cursor movement, in milliseconds. Design estimates, not bench measurements.</text>
+
+    <!-- legend -->
+    <g transform="translate(36,96)">
+      <rect width="12" height="12" rx="3" fill="#3987e5"/><text x="20" y="11" class="leg">Touch sampling</text>
+      <rect x="150" width="12" height="12" rx="3" fill="#d95926"/><text x="170" y="11" class="leg">Report coalescing</text>
+      <rect x="318" width="12" height="12" rx="3" fill="#199e70"/><text x="338" y="11" class="leg">Link + host injection</text>
+    </g>
+
+    <!-- design target band 30-40 ms -->
+    <rect x="570" y="130" width="116.7" height="214" fill="#ffffff" fill-opacity="0.05"/>
+    <text x="628" y="146" text-anchor="middle" class="note">design target</text>
+    <text x="628" y="162" text-anchor="middle" class="note">30–40 ms</text>
+
+    <!-- grid -->
+    <g stroke="#2e2e2c" stroke-width="1">
+      <line x1="336.7" y1="130" x2="336.7" y2="344"/><line x1="453.3" y1="130" x2="453.3" y2="344"/>
+      <line x1="570" y1="130" x2="570" y2="344"/><line x1="686.7" y1="130" x2="686.7" y2="344"/>
+      <line x1="803.3" y1="130" x2="803.3" y2="344"/><line x1="920" y1="130" x2="920" y2="344"/>
+    </g>
+    <line x1="220" y1="130" x2="220" y2="344" stroke="#55544e" stroke-width="1.5"/>
+
+    <!-- JND reference -->
+    <line x1="861.7" y1="122" x2="861.7" y2="344" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <text x="853" y="196" text-anchor="end" class="note">55 ms: smallest delay people notice</text>
+    <text x="853" y="212" text-anchor="end" class="note">when dragging on a touchpad</text>
+    <text x="853" y="228" text-anchor="end" class="note">(Deber et al., CHI 2015)</text>
+
+    <!-- Bluetooth HID: 4 + 6 + 12 = 22 -->
+    <text x="204" y="262" text-anchor="end" class="cat">WiFi</text>
+    <text x="204" y="279" text-anchor="end" class="catsub">via router</text>
+
+    <text x="204" y="192" text-anchor="end" class="cat">Bluetooth HID</text>
+    <text x="204" y="209" text-anchor="end" class="catsub">no laptop software</text>
+    <rect x="220" y="184" width="44.7" height="22" fill="#3987e5"/>
+    <rect x="266.7" y="184" width="68" height="22" fill="#d95926"/>
+    <path d="M336.7 184 h136 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-136 z" fill="#199e70"/>
+    <text x="487" y="200" class="val">≈ 22 ms</text>
+
+    <!-- WiFi: 4 + 2 + 8.1 = 14.1 -->
+    <rect x="220" y="254" width="44.7" height="22" fill="#3987e5"/>
+    <rect x="266.7" y="254" width="21.3" height="22" fill="#d95926"/>
+    <path d="M290 254 h90.5 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-90.5 z" fill="#199e70"/>
+    <text x="395" y="270" class="val">≈ 14 ms</text>
+
+    <!-- USB tethering: 4 + 2 + 1.1 = 7.1 -->
+    <text x="204" y="322" text-anchor="end" class="cat">USB tethering</text>
+    <text x="204" y="339" text-anchor="end" class="catsub">cable, zero jitter</text>
+    <rect x="220" y="314" width="44.7" height="22" fill="#3987e5"/>
+    <rect x="266.7" y="314" width="21.3" height="22" fill="#d95926"/>
+    <path d="M290 314 h8.8 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-8.8 z" fill="#199e70"/>
+    <text x="313" y="330" class="val">≈ 7 ms</text>
+
+    <!-- axis -->
+    <g class="tick" text-anchor="middle">
+      <text x="220" y="364">0</text><text x="336.7" y="364">10</text><text x="453.3" y="364">20</text>
+      <text x="570" y="364">30</text><text x="686.7" y="364">40</text><text x="803.3" y="364">50</text><text x="920" y="364">60 ms</text>
+    </g>
+
+    <text x="36" y="408" class="note">Bluetooth is bounded by Android's fixed 6–11 ms sniff interval for HID devices; WiFi assumes the laptop adapter is not in power-save.</text>
+  </g>
+</svg>
